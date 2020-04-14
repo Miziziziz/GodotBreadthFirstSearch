@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://wall.png" type="Texture" id=1]
+[ext_resource path="res://player.png" type="Texture" id=2]
+[ext_resource path="res://BaseCode.gd" type="Script" id=3]
+
+[sub_resource type="TileSet" id=1]
+0/name = "wall.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [  ]
+0/z_index = 0
+
+[node name="World" type="Node2D"]
+modulate = Color( 0.431373, 0.341176, 0.45098, 1 )
+script = ExtResource( 3 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 589842, 0, 0, 655377, 0, 0, 655390, 0, 0, 655391, 0, 0, 720926, 0, 0, 851985, 0, 0, 851986, 0, 0, 851987, 0, 0, 851988, 0, 0, 851989, 0, 0, 851990, 0, 0, 917520, 0, 0, 917521, 0, 0, 917525, 0, 0, 917526, 0, 0, 917527, 0, 0, 917534, 0, 0, 983056, 0, 0, 983063, 0, 0, 983070, 0, 0, 1048593, 0, 0, 1048599, 0, 0, 1048607, 0, 0, 1048608, 0, 0, 1114135, 0, 0, 1114145, 0, 0, 1179664, 0, 0, 1179665, 0, 0, 1179672, 0, 0, 1179673, 0, 0, 1179674, 0, 0, 1179675, 0, 0, 1179681, 0, 0, 1245200, 0, 0, 1245201, 0, 0, 1245210, 0, 0, 1245211, 0, 0, 1310736, 0, 0, 1310737, 0, 0, 1376273, 0, 0, 1441810, 0, 0, 1441811, 0, 0, 1441814, 0, 0, 1441815, 0, 0, 1441826, 0, 0, 1507348, 0, 0, 1507349, 0, 0, 1507352, 0, 0, 1507353, 0, 0, 1507354, 0, 0, 1507355, 0, 0, 1507361, 0, 0, 1507362, 0, 0, 1572892, 0, 0, 1572893, 0, 0, 1572894, 0, 0, 1572895, 0, 0 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 421.716, 285.678 )
+current = true
+zoom = Vector2( 0.3, 0.3 )
+
+[node name="Player" type="Sprite" parent="."]
+position = Vector2( 376, 296 )
+texture = ExtResource( 2 )
+hframes = 2
